@@ -4,9 +4,9 @@
     Author     : Desenvolvimento
 --%>
 
-<%@page import="beans.EmpresaBean"%>
+<%@page import="modelos.EmpresaModelo"%>
 <%
-    EmpresaBean empresa = (EmpresaBean)request.getAttribute("empresa");
+    EmpresaModelo empresa = (EmpresaModelo)request.getAttribute("empresa");
     String nomeEmpresa = empresa.getNome();
 %>
 
