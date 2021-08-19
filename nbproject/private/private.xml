@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/src/java/servlets/AlteraEmpresaServlet.java</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/src/java/acoes/ListaEmpresas.java</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/web/listaEmpresas.jsp</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/src/java/acoes/NovaEmpresa.java</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/web/novaEmpresaCriada.jsp</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/src/java/acoes/MostraEmpresa.java</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/web/formNovaEmpresa.jsp</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/src/java/servlets/UnicaEntradaServlet.java</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/web/formEditaEmpresa.jsp</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/src/java/acoes/AlteraEmpresa.java</file>
+            <file>file:/C:/Users/walex/Desktop/Estudo%20Alura/Formação%20Spring%20Framework/gerenciador-java-alura-main/src/java/acoes/RemoveEmpresa.java</file>
+        </group>
     </open-files>
 </project-private>

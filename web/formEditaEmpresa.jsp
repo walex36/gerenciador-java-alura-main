@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form action="/gerenciador/alteraEmpresaServlet" method="post">
+        <form action="/gerenciador/entrada?acao=AlteraEmpresa" method="post">
             <div>
                 Nome:<input type="text" name="nome" value="${empresa.nome}"/>
                 Data Abertura: <input type="text" name="data" value="<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>"/>

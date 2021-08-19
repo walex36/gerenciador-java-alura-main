@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author walex
  */
-@WebServlet(name = "MostrarEmpresaServlet", urlPatterns = {"/mostrarEmpresaServlet"})
+//@WebServlet(name = "MostrarEmpresaServlet", urlPatterns = {"/mostrarEmpresaServlet"})
 public class MostrarEmpresaServlet extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

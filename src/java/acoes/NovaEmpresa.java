@@ -3,33 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package servlets;
+package acoes;
 
-import modelos.BancoModelo;
-import modelos.EmpresaModelo;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelos.BancoModelo;
+import modelos.EmpresaModelo;
 
 /**
  *
- * @author Desenvolvimento
+ * @author walex
  */
-//@WebServlet(name = "NovaEmpresaServlet", urlPatterns = {"/novaEmpresa"})
-public class NovaEmpresaServlet extends HttpServlet {
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+public class NovaEmpresa {
+    
+    public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException{
+        
         System.out.println("Cadastrando Nova Empresa");
         
         String nomeEmpresa = request.getParameter("nome");
@@ -50,13 +45,11 @@ public class NovaEmpresaServlet extends HttpServlet {
         banco.adiciona(empresa);
         
         request.setAttribute("empresa", empresa);
-        response.sendRedirect("listaEmpresasServlet");
+        try {
+            response.sendRedirect("entrada?acao=ListaEmpresas");
+        } catch (IOException ex) {
+            Logger.getLogger(NovaEmpresa.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
-//        RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresasServlet");
-//        
-//        rd.forward(request, response);
     }
-
-    
-
 }

@@ -5,7 +5,11 @@
  */
 package servlets;
 
+import acoes.AlteraEmpresa;
 import acoes.ListaEmpresas;
+import acoes.MostraEmpresa;
+import acoes.NovaEmpresa;
+import acoes.RemoveEmpresa;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -27,15 +31,20 @@ public class UnicaEntradaServlet extends HttpServlet {
         String paramAcao = request.getParameter("acao");
         
         if (paramAcao.equals("ListaEmpresas")) {
-            System.out.println("Listando empresas");
-            
             ListaEmpresas acao = new ListaEmpresas();
             acao.executa(request, response);
-            
         }else if (paramAcao.equals("RemoveEmpresa")) {
-            System.out.println("Remove empresas");
-        }else if (paramAcao.equals("AdicionaEmpresa")) {
-            System.out.println("Adicionado empresas");
+            RemoveEmpresa acao = new RemoveEmpresa();
+            acao.executa(request, response);
+        }else if (paramAcao.equals("MostraEmpresa")) {
+            MostraEmpresa acao = new MostraEmpresa();
+            acao.executa(request, response);
+        }else if (paramAcao.equals("AlteraEmpresa")) {
+            AlteraEmpresa acao = new AlteraEmpresa();
+            acao.executa(request, response);
+        }else if (paramAcao.equals("NovaEmpresa")) {
+            NovaEmpresa acao = new NovaEmpresa();
+            acao.executa(request, response);
         }
     }
 }

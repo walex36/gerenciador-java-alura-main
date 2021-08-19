@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form action="/gerenciador/novaEmpresa" method="post">
+        <form action="/gerenciador/entrada?acao=NovaEmpresa" method="post">
             <div>
                 Nome:<input type="text" name="nome"/>
                 Data Abertura: <input type="text" name="data"/>

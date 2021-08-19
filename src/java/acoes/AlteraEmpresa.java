@@ -3,41 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package servlets;
+package acoes;
 
-import modelos.BancoModelo;
-import modelos.EmpresaModelo;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelos.BancoModelo;
+import modelos.EmpresaModelo;
 
 /**
  *
  * @author walex
  */
-//@WebServlet(name = "AlteraEmpresaServlet", urlPatterns = {"/alteraEmpresaServlet"})
-public class AlteraEmpresaServlet extends HttpServlet {
-
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
+public class AlteraEmpresa {
+    
+    public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException{
         String paramId = request.getParameter("id");
         Integer idEmpresa = Integer.valueOf(paramId);
         String nomeEmpresa = request.getParameter("nome");
@@ -57,10 +43,10 @@ public class AlteraEmpresaServlet extends HttpServlet {
         empresaBean.setNome(nomeEmpresa);
         empresaBean.setDataAbertura(dataAbertura);
         
-        response.sendRedirect("listaEmpresasServlet");
-        
+        try {
+            response.sendRedirect("entrada?acao=ListaEmpresas");
+        } catch (IOException ex) {
+            Logger.getLogger(AlteraEmpresa.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-
-    
-
 }

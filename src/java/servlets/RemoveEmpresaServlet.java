@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author walex
  */
-@WebServlet(name = "RemoveEmpresaServlet", urlPatterns = {"/removeEmpresaServlet"})
+//@WebServlet(name = "RemoveEmpresaServlet", urlPatterns = {"/removeEmpresaServlet"})
 public class RemoveEmpresaServlet extends HttpServlet {
 
     
